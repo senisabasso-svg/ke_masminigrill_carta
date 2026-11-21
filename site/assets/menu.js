@@ -2,7 +2,19 @@ import { getPublicMenu } from './data.js'
 import { el, logoNode, money, waLink } from './shared.js'
 
 const app = document.querySelector('#app')
-const slug = location.pathname.split('/').filter(Boolean).pop()
+
+function resolveSlug() {
+  const params = new URLSearchParams(location.search)
+  const fromQuery = params.get('slug')
+  if (fromQuery) return fromQuery.trim()
+  const parts = location.pathname.split('/').filter(Boolean)
+  // /c/ke-mas-mini-grill → ke-mas-mini-grill
+  if (parts[0] === 'c' && parts[1]) return parts[1]
+  const last = parts.at(-1)
+  return last && last !== 'c' ? last : ''
+}
+
+const slug = resolveSlug()
 
 function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -103,6 +115,10 @@ function render(data) {
 
 async function boot() {
   app.replaceChildren(skeleton())
+  if (!slug) {
+    renderMissing('Falta el local en el link.')
+    return
+  }
   try {
     const data = await getPublicMenu(slug)
     if (!data) {
