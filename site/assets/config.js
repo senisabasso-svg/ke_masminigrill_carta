@@ -1,6 +1,4 @@
-// Copiá desde config.example.js si hace falta.
-// Completá con Project URL y anon key de Supabase antes de publicar.
 window.CARTA_CONFIG = {
-  supabaseUrl: 'https://TU-PROYECTO.supabase.co',
-  supabaseAnonKey: 'TU_ANON_KEY'
+  supabaseUrl: 'https://dhhzbevnuwctlenjdvwr.supabase.co',
+  supabaseAnonKey: 'sb_publishable_QrbEwRI5mVaO9yI8C67CRA_YzArZvIe'
 }
