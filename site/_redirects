@@ -1,0 +1,8 @@
+/admin /admin/index.html 200
+/admin/ /admin/index.html 200
+/super /super/index.html 200
+/super/ /super/index.html 200
+/c/* /c/index.html 200
+/imprimir /imprimir/index.html 200
+/imprimir/ /imprimir/index.html 200
+/imprimir/* /imprimir/index.html 200

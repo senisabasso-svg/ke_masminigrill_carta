@@ -1,0 +1,51 @@
+:root {
+  --paper: #f4efe6;
+  --paper-2: #e7e0d4;
+  --ink: #1e1a16;
+  --ink-soft: #5c534a;
+  --line: #ddd4c6;
+  --ember: #b84324;
+  --ember-deep: #8d3018;
+  --white: #fbf8f3;
+  --danger: #8f2d2d;
+  --shadow: 0 22px 40px -28px rgba(48, 28, 14, 0.45);
+  --sans: "Outfit", "Segoe UI", sans-serif;
+  --serif: "Fraunces", "Palatino Linotype", Palatino, serif;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+button { cursor: pointer; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, p { margin: 0; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

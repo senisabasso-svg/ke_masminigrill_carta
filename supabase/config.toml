@@ -1,0 +1,27 @@
+[project]
+id = "carta-qr"
+
+[api]
+enabled = true
+
+[db]
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:8787"
+additional_redirect_urls = ["http://localhost:8787", "http://127.0.0.1:8787"]
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false
+
+[storage]
+enabled = true
+file_size_limit = "5MiB"
+
+[functions.create-company]
+verify_jwt = true
+
+[functions.manage-company]
+verify_jwt = true

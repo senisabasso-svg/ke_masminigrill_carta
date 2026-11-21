@@ -1,0 +1,23 @@
+{
+  "name": "carta-qr",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "npx --yes serve site -p 8787",
+    "build": "node scripts/build.mjs",
+    "start:legacy": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.5.0",
+    "qrcode": "^1.5.4"
+  }
+}
